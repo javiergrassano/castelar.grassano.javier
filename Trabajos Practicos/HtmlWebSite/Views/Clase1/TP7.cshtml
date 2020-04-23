@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Aciertos</title>
+    <script language="Javascript">
+        var nro = Math.ceil(Math.random() * 10);
+        var msje = "ingrese un numero entro 1 y 10";
+        var intentos = 1;
+        var aciertos;
+        alert(nro);
+        do {
+            aciertos = prompt(msje, "");
+            if (aciertos == null) {
+                break;
+            } else if (aciertos == nro) {
+                alert("acerto el nro en " + intentos + " " + (intentos == 1 ? "intento" : "intestos"));
+                break;
+            } else if (aciertos > nro) {
+                msje = "su eleccion es mas baja que el nro a adivinar. Siga participando";
+            } else {
+                msje = "su eleccion es mas mayor que el nro a adivinar. Siga participando";
+            }
+            intentos++;
+        } while (true);
+    </script>
+</head>
+<body>
+    <h1>Aciertos</h1>
+    
+    <br />
+    <a href="/home">Volver al menu</a>
+</body>
+</html>
