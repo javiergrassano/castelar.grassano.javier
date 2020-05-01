@@ -87,10 +87,12 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Views\Clase1\Sumar.js" />
+    <Content Include="Views\Clase4\estilos.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Clase4Controller.cs" />
     <Compile Include="Controllers\Clase1Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -109,6 +111,14 @@
     <Content Include="Views\Clase1\TP6.cshtml" />
     <Content Include="Views\Clase1\TP7.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Clase4\TP3.cshtml" />
+    <Content Include="Views\Clase4\TP4.cshtml" />
+    <Content Include="Views\Clase4\TP5.cshtml" />
+    <Content Include="Views\Clase4\TP6.cshtml" />
+    <Content Include="Views\Clase4\TP7.cshtml" />
+    <Content Include="Views\Clase4\TP2.cshtml" />
+    <Content Include="Views\Clase4\TP1.cshtml" />
+    <Content Include="Views\Clase4\TP8.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
