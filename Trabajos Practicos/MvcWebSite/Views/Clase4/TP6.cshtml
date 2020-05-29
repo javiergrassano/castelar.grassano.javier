@@ -1,0 +1,48 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio de selectores</title>
+
+    <style>
+
+        /* En su estado normal, un enlace se muestra de color rojo y sin subrayado (propiedad text-decoration). */
+        a:link {
+            color: red;
+            text-decoration: none;
+        }
+
+        /* Cuando un enlace ha sido visitado, se muestra de color verde oscuro. */
+        a:visited {
+            color: green;
+        }
+
+        a:focus {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        /* Cuando un enlace está activo, se muestra de color naranja. */
+        a:hover, a:active {
+            color: orange;
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Universidad de Buenos Aires</h1>
+    <ul>
+        <li><a href="">Presentación</a></li>
+        <li><a href="">Estudios</a></li>
+        <li><a href="">Alumnos</a></li>
+        <li><a href="">Deportes</a></li>
+        <li><a href="">Servicios</a></li>
+    </ul>
+
+    <br />
+    <a href="/home">Volver al menu</a>
+</body>
+</html>
+

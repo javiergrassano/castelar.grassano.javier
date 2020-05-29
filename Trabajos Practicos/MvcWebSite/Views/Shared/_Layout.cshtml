@@ -1,0 +1,102 @@
+﻿@{ 
+    var menu = ViewBag.menu;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - UAI</title>
+    <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="container">
+        <!-- Cabecera -->
+        <header>
+            <a  href="/" title="Principal">
+                <img class="logo" src="/content/img/logo.gif" alt="Logo de la Institución" />
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Principal</a> </li>
+                    <li><a href="/clase1/index">Clase 1</a> </li>
+                    <li><a href="/clase4/index">Clase 4</a> </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Contenido -->
+        <section>
+            <article>
+                @RenderBody()
+            </article>
+        </section>
+
+        <!-- Contenido relacionado-->
+        <aside id="pub">
+            <label class="title">
+                Trabajos practicos<br />
+                LPPA - 2020<br />
+                <hr />
+                Alumno<br />
+                <b>Grassano Javier</b>
+            </label>
+
+            <article>
+                @if (menu == null)
+                {
+                        <h3>Opciones</h3>
+                        <div>
+                            <ul>
+                                <li><a href="/">Principal</a> </li>
+                                <li><a href="/Home/Contact">Contacto</a> </li>
+                                <li><a href="/Home/About">Acerca de</a> </li>
+                            </ul>
+
+                        </div>
+                }
+                else if(menu=="CLASE1")
+                {
+                    <h3>Trabajos practicos Clase 1</h3>
+                    <ul>
+                        <li><h4>Tablas</h4></li>
+                        <li><a href="/clase1/tp1">TP 01 - Tablas basicas</a></li>
+                        <li><a href="/clase1/tp2">TP 02 - Tablas avanzadas</a></li>
+                        <li><h4>Listas</h4></li>
+                        <li><a href="/clase1/tp3">TP 03 - Ejemplo de listas</a></li>
+                        <li><h4>Formularios</h4></li>
+                        <li><a href="/clase1/tp4">TP 04 - Ejemplo Combo</a></li>
+                        <li><a href="/clase1/tp5">TP 05 - Hoja de estilos</a></li>
+                        <li><a href="/clase1/tp6">TP 06 - Javascript - Sumar</a></li>
+                        <li><a href="/clase1/tp7">TP 07 - Javascript - Aciertos</a></li>
+                    </ul>
+                }
+                else if (menu == "CLASE4")
+                {
+                    <h3>Trabajos practicos Clase 4 - 30/05/2020</h3>
+                    <ul>
+                        <li><h4>CSS</h4></li>
+                        <li><a href="/clase4/tp1">TP 01 - HTML &amp; CSS: Curso práctico avanzado - Atributo style</a></li>
+                        <li><a href="/clase4/tp2">TP 02 - HTML &amp; CSS: Curso práctico avanzado - Etiqueta style</a></li>
+                        <li><a href="/clase4/tp3">TP 03 - HTML &amp; CSS: Curso práctico avanzado - Archivo css</a></li>
+                        <li><h4>Selectores</h4></li>
+                        <li><a href="/clase4/tp4">TP 04 - Selectores 1</a></li>
+                        <li><a href="/clase4/tp5">TP 05 - Selectores 2</a></li>
+                        <li><a href="/clase4/tp6">TP 06 - Selectores 3</a></li>
+                        <li><h4>Maquetacion</h4></li>
+                        <li><a href="/clase4/tp7">TP 07 - Maquetación diseño fijo</a></li>
+                        <li><a href="/clase4/tp8">TP 08 - Maquetación diseño elástico</a></li>
+                    </ul>
+                }
+                </article>
+
+            </aside>
+        <!-- Pie de pagina -->
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Universidad Abierta Interamericana</p>
+
+            
+        </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
